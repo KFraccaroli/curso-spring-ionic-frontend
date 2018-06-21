@@ -17,6 +17,10 @@ export class ClienteService {
         return this.http.get(`${API_CONFIG.baseUrl}/clientes/email?value=${email}`);
     }
 
+    findById(cliente_id : string){
+        return this.http.get(`${API_CONFIG.baseUrl}/clientes/${cliente_id}`);
+    }
+
     getImagemFromBucket(id: string) : Observable<any>{
         let url = `${API_CONFIG.bucketBaseUrl}/cp${id}.jpg`;
         return this.http.get(url, {responseType : 'blob'});
