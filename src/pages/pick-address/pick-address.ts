@@ -38,7 +38,7 @@ export class PickAddressPage {
           cliente: {id: response['id']},
           enderecoDeEntrega: null,
           pagamento: null,
-          items: cart.items.map(x => 
+          itens: cart.items.map(x => 
             {
               return {
                 quantidade : x.quantidade, 
